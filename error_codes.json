@@ -1,0 +1,10 @@
+[
+    {
+        "code": "TRANSCRIPT_DISABLED",
+        "description": "Given video does not have transcripts or it has disabled transcripts"
+    },
+    {
+        "code": "NO_VIDEO_ID",
+        "description": "Video Id not provided"
+    }
+]

@@ -1,0 +1,23 @@
+{
+    "name": "YouTube Summarizer",
+    "description": "Summarize YouTube Videos In Just A Click",
+    "version": "1.0",
+    "manifest_version": 3,
+    "author": "Ankit Tiwari",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "YouTube Summarizer",
+        "default_icon": {
+            "16": "assets/images/YTS.png",
+            "32": "assets/images/YTS.png",
+            "48": "assets/images/YTS.png",
+            "128": "assets/images/YTS.png"
+        }
+    },
+    "icons": {
+        "16": "assets/images/YTS.png",
+        "32": "assets/images/YTS.png",
+        "48": "assets/images/YTS.png",
+        "128": "assets/images/YTS.png"
+    }
+}

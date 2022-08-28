@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favorite Icon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/YTS.png">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="assets/css/google-fonts.css" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="assets/css/mdb.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>YouTube Summarizer</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="text-danger">Y</span><span class="text-muted">T</span><span>S</span>
+                <small style="font-size: 15px; margin-left:10px">YouTube Summarizer</small>
+            </a>
+        </div>
+    </nav>
+
+    <h2 class="text-center my-3">Summarizer</h2>
+
+    <div class="col-md-6 mx-auto mt-5">
+        <div class="form-outline mx-3">
+            <input type="text" id="userInput" class="form-control" />
+            <label class="form-label" for="userInput">
+                Enter Video URL or Video ID <sup class="text-danger">*</sup>
+            </label>
+            <div class="invalid-feedback"></div>
+            <div class="valid-feedback"></div>
+        </div>
+        <div class="mt-5 mx-3">
+            <label for="SummaryPercentage" class="form-label">Summary Percentage</label>
+            <div class="range">
+                <input type="range" name="ratio" value="10" class="form-range" min="10" max="100" step="10"
+                    id="SummaryPercentage" />
+                <small id="display-range-value"></small>
+            </div>
+        </div>
+
+        <div class="text-center my-5">
+            <button class="btn btn-lg btn-secondary" id="summaryBtn">
+                Get Summary
+            </button>
+            <button class="btn btn-lg btn-secondary" id="loaderBtn" style="display:none">
+                <div class="spinner-border spinner-border-sm text-white me-2 spinner-control" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                Loading...
+            </button>
+        </div>
+    </div>
+
+    <div id="outputContainer"></div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModel" tabindex="-1" aria-labelledby="modelTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modelTitle"></h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/globals.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
